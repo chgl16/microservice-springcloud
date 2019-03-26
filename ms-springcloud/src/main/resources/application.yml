@@ -1,0 +1,13 @@
+# 服务注册中心
+server:
+  port: 8765
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false  # 这是服务中心，不是要注册的服务
+    fetch-registry: false           # 也不是服务发现检索
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/  # 注册中心的地址
+  server:
+    enable-self-preservation: false  # 关闭保护默认开启的保护机制

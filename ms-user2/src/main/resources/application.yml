@@ -1,0 +1,15 @@
+server:
+  port: 7000
+eureka:
+  instance:
+    prefer-ip-address: true # 显示主机的IP
+  client:
+    service-url:
+      defaultZone: http://localhost:8765/eureka/   # 指定服务端地址
+spring:
+  application:
+    name: ms-user2
+
+
+
+
